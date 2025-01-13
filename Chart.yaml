@@ -1,0 +1,19 @@
+apiVersion: v2
+name: test-chart
+description: Example of Helm Dependency Bug Issue
+type: application
+version: 0.0.1
+appVersion: latest
+dependencies:
+
+# Local Repo
+- alias: local
+  name: istiod
+  version: 0.0.1
+  repository: file://./charts/istiod-pinned-version
+
+# Istio Repo
+- alias: remote
+  name: istiod
+  version: v1.23.4
+  repository: https://istio-release.storage.googleapis.com/charts

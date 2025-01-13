@@ -1,0 +1,6 @@
+apiVersion: v2
+name: istiod
+description: Nested Chart to Test
+type: application
+version: 0.0.1
+appVersion: latest
